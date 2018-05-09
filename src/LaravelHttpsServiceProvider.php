@@ -31,11 +31,11 @@ class LaravelHttpsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/config/config.php', 'laravel-https');
+        $this->mergeConfigFrom(__DIR__ . '/Config/config.php', 'laravel-https');
 
         $publishTag = 'LaravelHttps';
         $this->publishes([
-            __DIR__ . '/config/config.php.php' => base_path('config/laravel-https.php'),
+            __DIR__ . '/config/config.php.php' => base_path('Config/laravel-https.php'),
         ], $publishTag);
     }
 }
