@@ -33,7 +33,7 @@ class LaravelHttpsServiceProvider extends ServiceProvider
     {
         $configPath = __DIR__ . '/../config/config.php';
         $this->mergeConfigFrom($configPath, 'laravel-https');
-        $this->publishes([$configPath => config_path('laravel-https.php')], 'LaravelHttps');
+        $this->publishes([$configPath => config_path('laravel-https.php')], 'laravel-https');
     }
 }
 

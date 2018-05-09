@@ -44,7 +44,7 @@ You must install this service provider.
 // config/app.php
 'provider' => [
     ...
-    Padosoft\Laravel\Https\Middleware\LaravelHttpsServiceProvider::class,
+    Padosoft\Laravel\Https\LaravelHttpsServiceProvider::class,
     ...
 ];
 ```
@@ -53,7 +53,7 @@ You must install this service provider.
 Optionally publish the packages config file by running the following from your projects root folder:
 
 ```bash
-    php artisan vendor:publish --tag=LaravelHttps
+    php artisan vendor:publish --tag=laravel-https
 ```
 
 ### register the middleware
