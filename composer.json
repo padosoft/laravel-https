@@ -1,0 +1,53 @@
+{
+    "name": "padosoft/laravel-https",
+    "description": "Force redirect to https for Laravel.",
+    "keywords": [
+        "padosoft",
+        "laravel-https",
+        "https",
+        "ssl",
+        "redirect",
+        "seo"
+    ],
+    "homepage": "https://github.com/padosoft/laravel-https",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lorenzo Padovani",
+            "email": "helpdesk@padosoft.com",
+            "homepage": "https://www.padosoft.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=5.6.0",
+        "laravel/framework": "~5.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.2",
+        "phpunit/phpunit": "^5.0",
+        "mockery/mockery": "^0.9.5",
+        "padosoft/laravel-test": "^2.0",
+        "padosoft/test": "^0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Padosoft\\Laravel\\Https\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Padosoft\\Laravel\\Https\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Padosoft\\Laravel\\Https\\HttpsServiceProvider"
+            ]
+        }
+    }
+}
