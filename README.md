@@ -4,7 +4,6 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Quality Score](https://img.shields.io/scrutinizer/g/padosoft/laravel-https.svg?style=flat-square)](https://scrutinizer-ci.com/g/padosoft/laravel-https)
 [![Total Downloads](https://img.shields.io/packagist/dt/padosoft/laravel-https.svg?style=flat-square)](https://packagist.org/packages/padosoft/laravel-https)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/3a39da13-6f5f-4041-9700-81e8c1f2e387.svg?style=flat-square)](https://insight.sensiolabs.com/projects/3a39da13-6f5f-4041-9700-81e8c1f2e387)
 
 This package provides a laravel middleware to force https redirect. 
 
