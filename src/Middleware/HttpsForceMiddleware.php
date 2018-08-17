@@ -16,7 +16,7 @@ class HttpsForceMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->secure()) {
+        if ($this->isSecureRequest($request)) {
             return $next($request);
         }
 
@@ -29,5 +29,15 @@ class HttpsForceMiddleware
         }
 
         return $next($request);
+    }
+
+    /**
+     * @param Request $request
+     * @return mixed
+     */
+    public function isSecureRequest(Request $request)
+    {
+        $xForwardedProto = strtolower($request->header('X_FORWARDED_PROTO', ''));
+        return ($request->secure() || $xForwardedProto=='https');
     }
 }

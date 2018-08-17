@@ -84,7 +84,7 @@ You can include the HttpsForce in a route groups or on individual routes.
 
 ### From Controller File:
 
-You can include the HttpsForce in the contructor of your controller file.
+You can include the HttpsForce in the constructor of your controller file.
 
 ### Controller File Example:
 

@@ -59,6 +59,23 @@ class LaravelHttpsTest extends TestBaseOrchestra
     }
 
     /** @test */
+    public function testIsSecureRequest_no_x_proto()
+    {
+        config(['laravel-https.always_force_https' => true]);
+        $response = $this->get('/');
+        $response->assertStatus(301);
+        $response->assertRedirect(secure_url('/'));
+    }
+
+    /** @test */
+    public function testIsSecureRequest_yes_x_proto()
+    {
+        config(['laravel-https.always_force_https' => true]);
+        $response = $this->get('/', ['X-Forwarded-Proto' => 'https']);
+        $response->assertStatus(200);
+    }
+
+    /** @test */
     public function testEnviromentNotInArray()
     {
         config(['laravel-https.always_force_https' => false]);
